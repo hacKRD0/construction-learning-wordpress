@@ -1,0 +1,132 @@
+/**
+ * Author: Gsuswami Mahendragiri
+ * Author URI: https://in.linkedin.com/in/mpgauswami-86a825254
+ *
+ */
+
+/* Add your custom styles here */
+p {
+  margin-bottom: 0.2rem;
+  margin-top: 0
+}
+:root {
+  --bs-breakpoint-xs: 0;
+  --bs-breakpoint-sm: 576px;
+  --bs-breakpoint-md: 768px;
+  --bs-breakpoint-lg: 992px;
+  --bs-breakpoint-xl: 1200px;
+  --bs-breakpoint-xxl: 1400px;
+  --global-color-primary: #1B3B4C;
+  --global-color-yellow: #FFC000;
+}
+.filter-col {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.cstm-btn {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+}
+.btn-color-1 {
+  background: var(--global-color-yellow) !important;
+  color: #000;
+}
+.btn-color-2 {
+  background: var(--global-color-primary) !important;
+  color: #fff !important;
+}
+.filter-col .card-header {
+  background-color: #2b5971 !important;
+  color: #fff !important;
+  padding: 5px 15px !important;
+  margin-bottom: 8px;
+}
+
+.icon-control {
+  margin-top: 5px;
+  float: right;
+  font-size: 80%;
+}
+
+.filter-col .card-header .title {
+  margin: 0;
+  color: #fff;
+  font-size: 14px;
+}
+
+.filter-col .btn-light {
+  border-color: var(--e-global-color-accent);
+  height: 42px;
+  background-color: var(--e-global-color-accent);
+  margin-top: 0;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  font-weight: 500;
+}
+.card.user-card {
+  border-radius: 5px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  margin-bottom: 30px;
+}
+
+.cs-directory-page .row {
+  margin: 0px;
+}
+
+p.title-mb-type {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: #060606;
+  background-color: #f1f5f7;
+  text-align: center;
+  padding: 5px;
+  width: 100%;
+}
+
+.card.team-boxed {
+  border-radius: 5px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  margin-bottom: 30px;
+}
+
+.user-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0px !important;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-shadow: 0 0 1px 2px #eaeaea, 0 -2px 1px -2px rgba(0, 0, 0, 0.04), 0 0 0 -1px rgba(0, 0, 0, 0.05) !important;
+}
+.card-block {
+  padding: 1.25rem;
+}
+
+.user-card .card-block {
+  text-align: center;
+}
+
+.user-card .card-block .user-image img {
+  width: 80px;
+  height: 80px;
+  background-color: #0365b3;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  margin-right: 8px;
+}
+
+h6.title-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}

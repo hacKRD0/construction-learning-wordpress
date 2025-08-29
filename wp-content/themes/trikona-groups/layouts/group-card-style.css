@@ -1,0 +1,80 @@
+.shadow-sm {
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+}
+.rounded {
+  border-radius: .25rem!important;
+}
+.bg-white {
+  background-color: #fff!important;
+}
+.py-20 {
+  padding: 20px;
+  text-align: center;
+}
+.rounded {
+  border-radius: 20px !important;
+  border: 1px solid #c5cdf5;
+}
+
+.custom_filter_values {
+  margin-top: 10px;
+}
+.mb-20{
+margin-bottom: 30px;
+}
+.mt-10{
+margin-top: 10px;
+}
+.cc-role {
+  text-align: center;
+  background-color: #3F51B5;
+  color: #fff;
+  padding: 4px;
+  border-radius: 5px 10px 0px 0px;
+}
+.row.inner-college-data {
+  border-top: 1px solid #dddddd;
+  margin-top: 8px;
+}
+.inner-college-data span {
+  font-size: 11px;
+}
+.inner-college-data p {
+  font-size: 22px;
+  font-weight: 600;
+}
+.inner-college-data .col-md-6+.col-md-6 {
+  border-left: 1px solid #dddddd;
+}
+.inner-college-data .col-md-6 {
+  padding-top: 12px;
+}
+.verified .rounded {
+  border-color: #FFC107;
+}
+.verStatus img {
+  width: 80%;
+}
+.verStatus {
+  position: absolute;
+  right: 0px;
+  top: 0;
+}
+.custom_filter {
+  margin-bottom: 25px;
+  padding: 0px 10px!important;
+}
+.custom_filter_values {
+  margin-top: 9px;
+}
+.custom_filter span {
+  font-weight: 700;
+}
+.custom_filter .cstm-btn {
+  margin-bottom: 10px;
+}
+.img-thumbnail {
+  width: 128px;
+  height: 128px;
+  object-fit: contain;
+}

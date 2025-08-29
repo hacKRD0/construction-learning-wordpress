@@ -1,0 +1,101 @@
+/*
+Theme Name: Trikona EdTech
+Theme URI: #
+Author: Trikona
+Author URI: #
+Description: Trikona Custom Theme for Construction Learning Platform. This theme has the main css and js files. Header and Footer for all child themes inherited from this theme. 
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: trikona-edtech
+*/
+
+/* Structural layout */
+/*.site-header .container {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: space-between;*/
+/*  max-width: 1200px;*/
+/*  margin: 0 auto;*/
+/*}*/
+
+/* Logo */
+/*.logo img {*/
+/*  height: 40px;*/
+/*}*/
+
+/* Navigation */
+/*.main-nav ul {*/
+/*  list-style: none;*/
+/*  display: flex;*/
+/*  gap: 2rem;*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*}*/
+/*.main-nav a {*/
+/*  text-decoration: none;*/
+/*  color: #333;*/
+/*  font-weight: 500;*/
+/*  position: relative;*/
+/*  padding: .25rem 0;*/
+/*}*/
+/*.main-nav a::after {*/
+/*  content: "";*/
+/*  position: absolute;*/
+/*  bottom: 0;*/
+/*  left: 0;*/
+/*  width: 0;*/
+/*  height: 2px;*/
+/*  background: #000;*/
+/*  transition: width .3s ease;*/
+/*}*/
+/*.main-nav a:hover::after,*/
+/*.main-nav .current-menu-item > a::after {*/
+/*  width: 100%;*/
+/*}*/
+
+/* CTA button */
+/*.cta-button {*/
+/*  background: #000;*/
+/*  color: #fff;*/
+/*  padding: .5rem 1rem;*/
+/*  border-radius: 4px;*/
+/*  text-decoration: none;*/
+/*  font-weight: 600;*/
+/*}*/
+/*.cta-button:hover {*/
+/*  background: #333;*/
+/*}*/
+
+/* Mobile toggle */
+/*.mobile-toggle {*/
+/*  display: none;*/
+/*  background: none;*/
+/*  border: none;*/
+/*  font-size: 1.5rem;*/
+/*  cursor: pointer;*/
+/*}*/
+
+/* Responsive behavior */
+/*@media (max-width: 768px) {*/
+/*  .main-nav {*/
+/*    position: absolute;*/
+/*    top: 100%;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    background: #fff;*/
+/*    display: none;*/
+/*    flex-direction: column;*/
+/*    padding: 1rem;*/
+/*  }*/
+/*  .main-nav ul {*/
+/*    flex-direction: column;*/
+/*    gap: 1rem;*/
+/*  }*/
+/*  .mobile-toggle {*/
+/*    display: block;*/
+/*  }*/
+/*  .main-nav.active {*/
+/*    display: flex;*/
+/*  }*/
+/*}*/

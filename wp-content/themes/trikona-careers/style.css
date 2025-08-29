@@ -1,0 +1,129 @@
+/*
+Theme Name: Trikona Careers
+Theme URI: https://yourdomain.com/
+Description: Child theme for the Trikona parent theme, specifically for the Jobs site.
+Author: Your Name
+Author URI: https://yourdomain.com/
+Template: trikona-edtech
+Version: 1.0.0
+Text Domain: trikona-careers
+*/
+
+/* You can add your custom CSS below */
+
+
+a.jm-ui-button span {
+    color: var(--e-global-color-black) !important;
+    font-weight: 600;
+    font-size: 16px;
+}
+a.jm-ui-button {
+    color: var(--e-global-color-black) !important;
+    background: var(--e-global-color-accent) !important;
+    border: none;
+}
+a.jm-ui-button:hover {
+    background: var(--e-global-color-black) !important;
+    color: var(--e-global-color-accent) !important;
+}
+a.jm-ui-button:hover span {
+    color: var(--e-global-color-accent) !important;
+}
+.jm-alerts__add-new a {
+    width: fit-content;
+    background: var(--e-global-color-accent);
+    border: 1px solid var(--e-global-color-accent);
+    color: var(--e-global-color-black);
+    font-weight: 500;
+    padding: 7px 27px;
+    border-radius: 4px;
+    border: none;
+}
+.jm-alerts__add-new a:hover{
+     background: var(--e-global-color-black) !important;
+    color: var(--e-global-color-accent) !important;
+    text-decoration: none;
+}
+.job-manager-form select {
+    height: 41px;
+}
+.job-manager-form input.button {
+    padding: 9px 17px;
+    border-radius: 4px;
+    margin-right: 6px;
+}
+#job-manager-alerts {
+    margin: 51px 0;
+}
+.search_jobs .search_submit {
+    margin: 0 auto;
+    text-align: center;
+}
+.search_submit input[type="submit"] {
+    line-height: 0;
+    width: auto;
+    margin-top: -11px;
+}
+.showing_jobs a {
+    padding: 0px 12px;
+}
+
+.banner-section {
+    background-color: #fbe3d3;
+    text-align: center;
+    padding: 50px 15px;
+    font-size: 35px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+.banner-section h1 {
+    color: #1e1e1e;
+    background: transparent;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+    font-size: 35px;
+    line-height: 1.2;
+}
+.single_job_listing {
+    padding: 40px 0;
+}
+ .job_application input[type="button"] {
+    padding: 13px 20px !important;
+    border-radius: 4px;
+}
+
+.job-right-sidebar { 
+    padding: 35px 20px !important;
+}
+.cstm-con ul {
+   padding: 0;
+}
+br {
+    display: none;
+}
+.job_filters .search_jobs div {
+    flex: 00 47%;
+}
+.job_filters .job_filters .search_jobs{
+    justify-content: flex-start;
+}
+.slider-box .ui-widget-header {
+    background: #ffc000;
+}
+.slider-box .ui-widget-content {
+    background: #e4e4e4;
+}
+#job_package_selection {
+    margin-bottom: 60px;
+    margin-top: 60px;
+}
+.job_listing_packages_title [type="submit"] {
+    padding: 9px 15px;
+    border-radius: 4px;
+}
+@media (max-width: 767px) {
+    .job-right-sidebar{
+        margin: 15px;
+    }
+}

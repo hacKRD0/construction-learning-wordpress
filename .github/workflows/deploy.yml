@@ -1,0 +1,101 @@
+# .github/workflows/deploy.yml
+name: Deploy to cPanel (push-deploy via secrets)
+
+on:
+  push:
+    branches: [ stage, main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    # Gate prod with Environment protections; staging runs straight through.
+    environment: ${{ github.ref == 'refs/heads/main' && 'production' || 'staging' }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+    
+      # (optional safety) prove we’re not shallow
+      - name: Verify not shallow
+        run: git rev-parse --is-shallow-repository && git log -1 --oneline
+
+      - name: Setup SSH agent
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.CPANEL_SSH_KEY }}
+    
+      - name: Show target repo URLs (sanitized)
+        shell: bash
+        run: |
+          show() {
+            local url="$1"
+            local user host path
+            user=$(echo "$url" | sed -E 's#ssh://([^@]+)@.*#\1#')
+            host=$(echo "$url" | sed -E 's#.*@([^/:]+).*#\1#')
+            path=$(echo "$url" | sed -E 's#ssh://[^@]+@[^/]+(.*)#\1#')
+            echo "  user: $user"
+            echo "  host: $host"
+            echo "  path: $path"
+            # DO NOT echo the full URL from secrets, it will be masked as ***, so this is more useful
+          }
+          echo "STAGE:"
+          show "${{ secrets.STAGE_REPO_URL }}"
+          echo
+          echo "PROD:"
+          show "${{ secrets.PROD_REPO_URL }}"
+
+
+      - name: Extract hosts from repo URLs
+        id: host
+        shell: bash
+        run: |
+          stage_host=$(echo "${{ secrets.STAGE_REPO_URL }}" | sed -E 's#.*@([^/:]+).*#\1#')
+          prod_host=$(echo "${{ secrets.PROD_REPO_URL }}" | sed -E 's#.*@([^/:]+).*#\1#')
+          echo "stage_host=$stage_host" >> $GITHUB_OUTPUT
+          echo "prod_host=$prod_host"   >> $GITHUB_OUTPUT
+
+      - name: Add server host keys
+        shell: bash
+        run: |
+          mkdir -p ~/.ssh
+          if [ -n "${{ steps.host.outputs.stage_host }}" ]; then
+            ssh-keyscan -H "${{ steps.host.outputs.stage_host }}" >> ~/.ssh/known_hosts
+          fi
+          if [ -n "${{ steps.host.outputs.prod_host }}" ]; then
+            ssh-keyscan -H "${{ steps.host.outputs.prod_host }}"  >> ~/.ssh/known_hosts
+          fi
+          
+      - name: Force cPanel receive-pack
+        run: |
+          git config remote.stage.receivepack /usr/local/cpanel/3rdparty/bin/git-receive-pack
+          git config remote.prod.receivepack  /usr/local/cpanel/3rdparty/bin/git-receive-pack
+
+        
+      - name: Force publickey auth only
+        run: |
+          echo "GIT_SSH_COMMAND=ssh -o PreferredAuthentications=publickey -o PasswordAuthentication=no -o KbdInteractiveAuthentication=no -o StrictHostKeyChecking=yes" >> $GITHUB_ENV
+
+
+      - name: Configure cPanel remotes
+        shell: bash
+        run: |
+          git remote remove stage 2>/dev/null || true
+          git remote remove prod  2>/dev/null || true
+          git remote add stage "${{ secrets.STAGE_REPO_URL }}"
+          git remote add prod  "${{ secrets.PROD_REPO_URL }}"
+          
+      - name: Show remotes
+        run: git remote -v
+
+      - name: Push to STAGE
+        if: github.ref == 'refs/heads/stage'
+        run: git push --force --exec=/usr/local/cpanel/3rdparty/bin/git-receive-pack stage refs/heads/stage:refs/heads/stage
+
+
+      - name: Push to PROD
+        if: github.ref == 'refs/heads/main'
+        run: git push --force --exec=/usr/local/cpanel/3rdparty/bin/git-receive-pack prod refs/heads/main:refs/heads/main
+

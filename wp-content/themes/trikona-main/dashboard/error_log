@@ -1,0 +1,5 @@
+[15-Jul-2025 01:01:13 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home4/myedt8f5/constructionlearning.online/wp-content/themes/trikona-main/dashboard/class_profiles_ajax.php:7
+Stack trace:
+#0 /home4/myedt8f5/constructionlearning.online/wp-content/themes/trikona-main/dashboard/class_profiles_ajax.php(885): TrikonaUserProfilesAjax->__construct()
+#1 {main}
+  thrown in /home4/myedt8f5/constructionlearning.online/wp-content/themes/trikona-main/dashboard/class_profiles_ajax.php on line 7

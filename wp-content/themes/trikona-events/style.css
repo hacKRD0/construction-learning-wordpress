@@ -1,0 +1,296 @@
+/* 
+Theme Name: Trikona Events
+Description: Trikona Child is a child theme of Trikona
+Author: Trikona Team
+Author URI: 
+Template: trikona-edtech
+Version: 1.0.0
+Text Domain: trikona-child
+*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+.ev_container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.multi-btn a {
+    font-size: 22px;
+    line-height: 1; 
+    border-radius: 25px;
+    letter-spacing: 4.7px;
+}
+.ev_banner_section h1 { 
+    padding: 50px 15px;
+    font-size: 35px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+.multi-btn {
+    padding: 20px 0;
+}  
+.event_main {
+    padding-bottom: 60px;
+}
+.em-list {
+	 width: 100%;
+	 display: grid;
+	 grid-template-rows: 1fr;
+	 grid-gap: 25px;
+}
+ .em-list.em-grid {
+	 grid-template-rows: none;
+	 grid-template-columns: repeat(auto-fill, minmax(var(--view-grid-width), 1fr));
+	 align-items: start;
+	 justify-items: center;
+	 grid-gap: 20px;
+}
+ .em-list.em-grid > div.em-item {
+	/* a little more specific to override without !important */
+	 max-width: 400px;
+	 height: 100%;
+	 padding: 0 !important;
+	 border: none;
+	 box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
+	 transition: box-shadow 0.3s ease-out;
+	 cursor: pointer;
+}
+ .em-list.em-grid > div.em-item:hover {
+	 box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+ .em-list.em-grid > div.em-item .em-item-image {
+	 position: relative;
+	 width: 100%;
+	 aspect-ratio: 1.5;
+	 padding: 0 !important;
+}
+ .em-list.em-grid > div.em-item .em-item-image:not(.has-placeholder) > div {
+	 position: absolute;
+	 overflow: hidden;
+	 inset: 0;
+	 width: 100%;
+	 height: 100%;
+}
+ .em-list.em-grid > div.em-item .em-item-image:not(.has-placeholder) > div img {
+	 position: absolute;
+	 min-width: 100%;
+	 min-height: 100%;
+	 max-width: 100%;
+	 max-height: 100%;
+	 display: block;
+	 padding: 0;
+	 z-index: 0;
+	 box-sizing: border-box;
+	 object-fit: cover;
+	 object-position: center center;
+	 margin: auto;
+}
+ .em-list.em-grid > div.em-item .em-item-image .em-item-image-placeholder {
+	 display: block;
+}
+ .em-list.em-grid > div.em-item .em-item-info {
+	 margin-top: 1px;
+	 padding: 10px 10px 20px 15px;
+}
+ .em-list.em-grid > div.em-item .em-item-info .em-item-title {
+	 font-weight: 400 !important;
+	 font-size: calc(var(--font-size) + 4px) !important;
+	 margin: 5px 0 15px !important;
+}
+ .em-list.em-grid > div.em-item .em-item-info .em-item-title a {
+	 color: var(--default-color) !important;
+	 background-color: transparent !important;
+}
+ .em-list.em-grid > div.em-item .em-item-info .em-item-meta {
+	 display: block;
+}
+ .em-list.em-grid > div.em-item .em-item-info .em-item-meta .em-item-meta-line {
+	 line-height: 16px;
+	 margin-bottom: 10px;
+	 grid-template-columns: 30px 1fr;
+	 font-size: calc(var(--font-size) - 2px);
+}
+ .em-list.em-grid > div.em-item .em-item-info .em-item-meta .em-icon {
+	 line-height: 16px;
+	 width: 16px;
+	 height: 16px;
+	 background-size: 16px;
+}
+ .em-list.em-grid > div.em-item .em-item-info .em-item-meta > div {
+	 min-width: auto;
+}
+ .em-list.em-grid > *:not(.em-item) {
+	 width: 100%;
+	 align-self: center;
+	 justify-self: center;
+	 justify-content: center;
+	 grid-column: -1;
+}
+ .em-list .em-item {
+	 width: 100%;
+	 display: grid;
+	 grid-template-columns: minmax(0, 1fr) 2fr;
+	 border-top: 1px solid #efefef;
+	 padding: 30px 4px 3px;
+	 background-color: var(--meta-bg);
+	 color: var(--default-color);
+}
+ .em-list .em-item:first-child {
+	 border-top: 0;
+	 padding-top: 5px;
+}
+ .em-list .em-item .em-item-info {
+	 border-left: 4px solid var(--default-border);
+	 padding: 0 10px 0 35px;
+}
+ .em-list .em-item .em-item-info h3.em-item-title {
+	 font-size: 22px;
+	 line-height: 26px;
+	 font-weight: normal;
+	 clear: none;
+	 margin: 0 0 7px 0;
+	 padding: 0;
+	 text-decoration: none;
+}
+ .em-list .em-item .em-item-info h3.em-item-title a {
+	 color: var(--a-color-1);
+	 text-decoration: none;
+}
+ .em-list .em-item .em-item-info .em-item-meta {
+	 margin-bottom: 20px;
+	 display: flex;
+	 flex-direction: row;
+	 flex-wrap: wrap;
+}
+ .em-list .em-item .em-item-info .em-item-meta > div {
+	 flex: 1 1 50%;
+	 min-width: 250px;
+}
+ .em-list .em-item .em-item-info .em-item-desc {
+	 font-size: 16px;
+	 margin: 20px 0;
+}
+ .em-list .em-item .em-item-info .button {
+	 margin-bottom: 0 !important;
+}
+ .em-list.size-small .em-item, .em-list.em-grid .em-item {
+	 border: 1px solid var(--main-border-color);
+	 padding: 10px;
+	 box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	 grid-template-columns: 100%;
+	 grid-template-rows: min-content max-content;
+}
+ .em-list.size-small .em-item .em-item-image, .em-list.em-grid .em-item .em-item-image {
+	 min-width: 125px;
+	 max-width: 100%;
+	 padding-bottom: 10px;
+}
+ .em-list.size-small .em-item .em-item-image.has-placeholder, .em-list.em-grid .em-item .em-item-image.has-placeholder {
+	 padding: 20px 0 30px;
+}
+ .em-list.size-small .em-item .em-item-image img, .em-list.em-grid .em-item .em-item-image img, .em-list.size-small .em-item .em-item-image .em-item-image-placeholder, .em-list.em-grid .em-item .em-item-image .em-item-image-placeholder {
+	 padding: 0;
+}
+ .em-list.size-small .em-item .em-item-info, .em-list.em-grid .em-item .em-item-info {
+	 border-left: none !important;
+	 border-top: 4px solid var(--default-border);
+	 padding: 10px 10px 10px 10px;
+}
+ .em-list.size-small .em-item .em-item-info .em-item-meta, .em-list.em-grid .em-item .em-item-info .em-item-meta {
+	 width: 100%;
+	 margin-left: 0;
+	 line-height: 22px;
+	 margin-bottom: 5px;
+	 display: flex;
+	 flex-direction: row;
+	 flex-wrap: wrap;
+}
+ .em-list.size-small .em-item .em-item-info .em-item-meta > div, .em-list.em-grid .em-item .em-item-info .em-item-meta > div {
+	 flex: 1 1 50%;
+	 min-width: 200px;
+}
+.em.pixelbones .input .button:not([data-nostyle]) {
+    background: var(--e-global-color-accent) !important;
+    font-weight: 500 !important;
+    font-size: 13px !important;
+    color: var(--e-global-color-black) !important;
+    border-radius: 0 !important;
+    border: none !important;
+}
+.em.pixelbones .input .button:not([data-nostyle]):hover {
+	background: var(--e-global-color-black) !important;
+    color: var(--e-global-color-accent) !important;
+}
+.em.em-list .em-item .em-item-info{
+    border: #fff !important;
+}
+.em.pixelbones .input input[type=submit]:not([data-nostyle]):hover {
+    color: var(--e-global-color-accent) !important;
+}
+
+	
+.event-category-pagination {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-end;
+	margin-top: 20px;
+}
+
+.event-category-pagination .page-numbers {
+    display: inline-block;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+    text-decoration: none;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.event-category-pagination .page-numbers:hover {
+    border-color: #3C4A75;
+    color: #3C4A75;
+}
+
+.event-category-pagination .current {
+    background-color: #F4B63E;
+    /* border-color: #0038FF; */
+    color: #333;
+    font-weight: 600;
+}
+ 
+.event-category-pagination .next {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.event-category-pagination .next:hover {
+    border-color: #3C4A75;
+    color: #3C4A75;
+}
+.css-my-bookings {
+    text-align: center;
+    padding: 50px 15px;
+}
+ 
+@media   (max-width: 767px) {
+    .multi-btn .wp-block-button.has-custom-width {
+        width: 100%;
+    }   
+    
+    .event-category-item {
+        width: 100%;
+        position: relative;
+        text-align: center;
+        -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+        -ms-box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+        margin-bottom: 30px;
+    }
+}

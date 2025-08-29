@@ -1,0 +1,262 @@
+/* 
+Theme Name: Trikona Main
+Theme URI: #
+Description: Trikona Main is a child theme of Trikona EdTech, created by Trikona
+Author: Team Trikona
+Author URI: #
+Template: trikona-edtech
+Version: 1.0
+Text Domain: trikona-Main
+*/
+
+
+/* membership-levels page Start*/
+
+.package_row {
+    margin: 50px auto !important;
+    max-width: 1140px;
+    padding: 0 15px;
+    width: 100%;
+}
+.Professional_pack_content {
+    border: 3px solid;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    margin-bottom: 22px;
+    transition-duration: 1s;
+
+}
+.Professional_pack_content:hover{
+    box-shadow: 0px 0px 31px 0px rgba(0, 0, 0, 0.24);
+}
+.Professional_pack_head {
+    padding: 25px 0;
+}
+.Professional_pack_head h3 {
+    font-weight: 300;
+    margin-bottom: 0;
+}
+.Professional_pack_price {
+    padding: 30px 0px;
+}
+.Professional_pack_price h2 {
+    font-weight: 900;
+    font-size: 50px;
+    margin-bottom: 0;
+}
+.Professional_pack_price p {
+    margin-bottom: 0;
+}
+.Professional_pack_body ul {
+    list-style: none;
+    text-align: center;
+    padding: 18px 0;
+    margin: 0;
+
+}
+.Professional_pack_body li {
+    font-size: 18px;
+    padding: 12px 0;
+    /* color: #1b3b4c; */
+    font-weight: 300;
+    position: relative;
+}
+.Professional_pack_body li:after {
+    content: "";
+    border: 1px solid #000;
+    width: 88px;
+    height: 2px;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    margin-left: calc((100% - 25%) / 2);
+    margin-right: calc((100% - 25%) / 2);
+    bottom: -3px;
+}
+.Professional_pack_body li:nth-last-child(1):after{
+    display: none;
+}
+.Professional_pack_head h2 {
+    margin-bottom: 0;
+}
+.Professional_pack_btn a {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.student_member_main{
+    padding-left: calc((100% - 75%) / 2);
+    padding-right: calc((100% - 75%) / 2);
+    padding: 40px 30px;
+}
+.student_member_price p {
+    display: inline;
+    vertical-align: top;
+    
+}
+.student_member_price h2 {
+    font-size: 55px;
+    line-height: 54px;
+    font-weight: 800;
+    display: inline-block;
+}
+.student_member_price {
+    padding-top: 35px;
+    text-align: center;
+    padding-bottom: 25px;
+}
+.student_member_list p.text:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #acacac;
+    margin-top: 13px;
+    margin-bottom: 5px;
+}
+.student_member_list p.text:after {
+    content: "";
+    display: block;
+    width: 171px;
+    height: 1px;
+    background: #acacac;
+    margin-top: 13px;
+    margin-bottom: 5px;
+}
+.student_member_main {
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);    
+    transition-duration: 1s;
+}
+.student_member_main:hover { 
+    box-shadow: 0 1px 13px 4px #96F6FA;
+}
+.student_member_wrapper {
+    border: 1px solid #000;
+    padding: 15px;
+}
+.student_member_head h2 {
+    font-weight: 700;
+    zoom: 1.2;
+}
+.student_row > div {
+    /* width: 100%; */
+    max-width: 100%;
+}
+.corporate_pack_content {
+    border: 2px solid;
+}
+.corporate_pack_body ul {
+    text-align: start;
+    padding: 18px 35px;
+}
+.corporate_pack_body li::after {
+    border-color: #0000001a;
+    width: 100%;
+    margin-left: 0;
+}
+.corporate_member_price {
+    padding-bottom: 0;
+    padding-top: 40px;
+    margin-bottom: -5px;
+}
+.corporate_col .Professional_pack_content {
+    margin-bottom: 0px;
+}
+.corporate_col .Professional_pack_content {
+    margin-bottom: 0;
+    border: 1px solid;
+    box-shadow: none;
+}
+.corperate_pack_btn a {
+    border-color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.explore_main > div:nth-child(1) {
+    border-width: 3px;
+    border-style: solid;
+    padding: 30px;
+    border-radius: 351px;
+    width: 105px;
+    height: 105px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: #4054b2;
+}
+.explore_main svg {
+    fill: #4054b2;
+    color: #4054b2;
+    font-size: 33px;
+    width: 33px;
+}
+.explore_main {
+    display: grid !important;
+    grid-template-columns: auto 73%;
+    justify-items: start;
+    padding: 20px;
+    width: 50%;
+}
+.explore_main_content h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: rgb(76, 76, 76);
+    margin-bottom: 10px;
+}
+.explore_main_content p {
+    font-size: 17px !important;
+    font-weight: 600;
+    color: rgb(76, 76, 76);
+}
+.explore_main:hover > div:nth-child(1) {
+    background: #4054b2;
+}
+.explore_main:hover > div:nth-child(1) svg {
+    fill: #fff;
+}
+.page-id-818 article > h1 {
+    display: none;
+}
+.page-id-818 .has-background-color {
+    padding: 20px 10px !important;
+}
+.page-id-818 .has-background-color h2 {
+    margin: 0;
+}
+@media (max-width: 991px) {
+    .student_member_list p.text:after{
+        width: 100%;
+    }
+}
+@media (max-width: 767px) {
+    .student_member_head h2 {    
+        zoom: 0;
+    }
+    .explore_main{
+        width: 100%;
+    }    
+    .membership-lvl-block .wp-block-group.alignwide.is-nowrap.is-layout-flex {
+        display: flex;
+        flex-direction: column;
+    }
+    .explore_main > div:nth-child(1){
+        padding: 17px;
+        width: 70px;
+        height: 70px;
+    } 
+    .explore_main_content h3{
+        margin-bottom: 4px;
+    }
+    .explore_main{
+        padding: 20px 0;
+    }
+    .package_row .wp-block-columns.is-not-stacked-on-mobile {
+        display: flex;
+        flex-direction: column;
+    }
+    .membership-lvl-block{ padding: 0 !important;}
+    .page-id-818 .has-background-color h2 {font-size: 26px; }
+    .page-id-818 .has-background-color h1 {font-size: 30px; }
+}
+
+
+/* membership-levels page End*/

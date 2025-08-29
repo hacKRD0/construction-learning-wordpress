@@ -1,0 +1,733 @@
+/*
+Theme Name: Trikona Learning
+Description: Trikona Learning is a child theme of Trikona
+Author: Trikona Team
+Author URI: 
+Template: trikona-edtech
+Version: 1.0.0
+Text Domain: trikona-learning
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif !important;
+    font-style: normal;
+    line-height: 120%;
+}
+body, p, div, a, li, ul, ol, button, input, textarea, select, label, small, strong {
+    font-family: "Lato", sans-serif !important;
+    font-size: 18px;
+      line-height: 100%;
+    line-height: 28px;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #ffc000;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #FFEFB7;
+    border-radius: 3px;
+}
+
+.lms_course {
+    padding: 70px 0;
+}
+.container {
+	max-width : 1200px;
+	margin : auto;
+    padding: 0 15px;
+}
+.course-featured-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.llms-favorite-wrapper button:focus {
+    outline: none;
+}
+[type=button]:focus, [type=button]:hover, [type=submit]:focus, [type=submit]:hover,
+.llms-favorite-wrapper button:focus, .llms-favorite-wrapper button:hover {
+    background: transparent !important;
+    color: inherit !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+.llms-access-plan .llms-access-plan-content, .llms-access-plan .llms-access-plan-footer {
+    background: #FCF4DD;
+}
+.llms-access-plan-title {
+    background: #ffc000;
+}
+.llms-instructor-info .llms-instructors .llms-author .avatar {
+    border: 4px solid #ffc000;
+}
+.llms-instructor-info .llms-instructors .llms-author {
+    background: #fcf4dd;
+    border-top: 4px solid #ffc000;
+}
+span.llms-author-info.name {
+    font-size: 26px;
+    margin-bottom: 9px;
+}
+
+.llms-syllabus-wrapper .llms-lesson-preview.is-complete section {
+    /* background: linear-gradient(to right, #fef9c2, #ffffff); */
+    background: linear-gradient(to right, #fef9c2, #fef9c2);
+}
+.llms-syllabus-wrapper .llms-lesson-preview.is-complete section:hover {
+    background: linear-gradient(to right, #fef9c2, #fef9c6);
+}
+
+
+.llms-syllabus-wrapper .llms-lesson-preview .llms-lesson-locked .llms-lesson-link {
+    color: #000000ad;
+}
+.llms-syllabus-wrapper .llms-lesson-preview .llms-lesson-locked {
+    background: #fcf4dd;
+}
+.llms-syllabus-wrapper .llms-lesson-preview .llms-lesson-locked:hover, .llms-syllabus-wrapper .llms-lesson-preview section:hover {
+    background: #f9e099;
+}
+.llms-syllabus-wrapper .llms-lesson-preview section:hover {
+    background: #fcf4dd;
+}
+.llms-favorite-wrapper .fa-heart {
+    color: #ffc000;
+}
+.llms-syllabus-wrapper .llms-lesson-preview.is-free .llms-lesson-complete, .llms-syllabus-wrapper .llms-lesson-preview.is-complete .llms-lesson-complete {
+    color: #ffc000;
+}
+.llms-progress .progress-bar-complete, .llms-lesson-preview .llms-icon-free {
+    background-color: #ffc000;
+}
+
+a.llms-button-primary, a.llms-button-primary {
+    background: var(--e-global-color-accent);
+    border: 1px solid var(--e-global-color-accent);
+    color: var(--e-global-color-black);
+}
+a.llms-button-primary:hover, .llms-button-primary:hover {
+   background: var(--e-global-color-black) !important;
+    color: var(--e-global-color-accent);
+    text-decoration: none;
+}
+.llms-lesson-button-wrapper {
+    margin: 15px 0;
+}
+.llms-categories a {
+    font-size: 15px;
+    /* background-color: #fcf4dd; */
+    padding: 1px 2px 3px;
+    /* text-decoration: none; */
+    color: #212529;
+    font-weight: 600;
+    border-radius: 2px;
+}
+.llms-categories a:hover {
+    background: #ffc000;
+    color: #fff;
+}
+.llms-course-navigation .llms-lesson-preview sectiong >a.llms-lesson-link:hover, .llms-course-navigation section:hover, .llms-course-nav .llms-lesson-preview > a.llms-lesson-link:hover{
+    background: #fcf4dd;
+}
+.llms-course-navigation a.llms-lesson-link section {
+    background: transparent;
+}
+p.llms-parent-course-link {
+    margin-top: 0;
+}
+.filter-group a.btn.filterBtn {
+    margin-top: 20px;
+}
+.cs_members_directory_pagination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    font-family: "Lato", sans-serif;
+}
+
+.cs_members_directory_pagination .page-numbers {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    min-width: 36px;
+    height: 36px;
+    text-align: center;
+}
+
+.cs_members_directory_pagination .page-numbers:hover {
+    background-color: #000;
+    color: #ffc000;
+    border-color: #000;
+}
+
+.cs_members_directory_pagination .current {
+    background-color: #ffc000;
+    color: #000;
+    border-color: #ffc000;
+    pointer-events: none;
+}
+.llms-loop-item-content .llms-loop-title:hover {
+    color: #ffc000;
+}
+.cs_members_directory_pagination .next {
+    font-size: 18px;
+    padding: 6px 12px;
+}
+h1 {font-size: 30px;}
+h2 {font-size: 27px;}
+h3 {font-size: 25px;}
+
+.blog-container {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.blog-content {
+    flex: 0 0 68%;
+}
+.blog_list_wrapper{
+    flex: 0 0 68%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.blog-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.3s;
+    box-shadow: 0 15px 33px -15px #0000004d;
+}
+.blog_content{
+    padding: 15px;
+}
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-thumb img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+.blog-card h3 {
+    margin: 0;
+    margin-bottom: 9px;
+}
+.blog-card h3 a {
+     font-size: 23px;
+    margin: 10px 0;
+    text-decoration: none;
+    font-family: 'Montserrat' !important;
+}
+
+.blog-meta {
+    font-size: 13px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.blog-card p {
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+.read-more:hover{
+    color: var(--e-global-color-accent);
+}
+.cust_widget ul li a:hover{
+    color: var(--e-global-color-accent);
+}
+.blog-sidebar {
+    flex: 0 0 28%;
+}
+.cust_widget {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.cust_widget h4 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    border-bottom: 1px solid #ddd;
+    padding: 8px 0 18px;
+    margin: 0;
+    margin-bottom: 15px;
+}
+.cust_widget ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.cust_widget ul li {
+    margin-bottom: 14px;
+    line-height: 0;
+}
+.cust_widget ul li a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 17px;
+    line-height: 22px;
+}
+.pagination {
+    margin-top: 30px;
+    text-align: center;
+}
+.blog_pagination {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 30px;
+    font-family: "Lato", sans-serif;
+}
+
+.blog_pagination .page-numbers {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 5px;
+    border: 1px solid #ddd;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    min-width: 36px;
+    height: 36px;
+    text-align: center;
+}
+
+.blog_pagination .page-numbers:hover {
+    background-color: #000;
+    color: #ffc000;
+    border-color: #000;
+}
+
+.blog_pagination .current {
+    background-color: #ffc000;
+    color: #000;
+    border-color: #ffc000;
+    pointer-events: none;
+}
+.Post_breadcrumb{
+     color: #ffc000;
+    font-size: 16px;
+    font-weight: 900;
+}
+.Post_breadcrumb a{
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+}
+.blog_pagination .next {
+    font-size: 18px;
+    padding: 6px 12px;
+}
+section.blog-banner {
+    padding: 110px 0px 110px;
+    text-align: center;
+    color: #fff;
+    background-size: cover;
+    position: relative;
+}
+ .site-navigation ul.menu{
+    margin-top: 0;
+ }
+ span.brad_divder {
+    display: inline;
+    font-weight: 700;
+    margin: 0 8px;
+}section.blog-section {
+    padding: 70px 0;
+}
+.blog-banner .overlay{
+    position: absolute;
+    inset: 0;
+    background-color: rgb(255 192 0 / 29%);
+    z-index: 1;
+}
+.blog-banner .banner-content {
+    z-index: 999;
+    position: relative;
+}
+/* Blog Details page */
+.entry-content img{
+    width: 100%;
+}
+.Post_details_wrapper {
+    flex: 0 0 68%;
+}
+.Post_details_row_wrapper {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+img.post_img {
+    width: 100%;
+    border-radius: 14px;
+}
+.Post_details_wrapper ul {
+    list-style: disc;
+}
+.Post_details_wrapper blockquote {
+    padding-left: 1em;
+    border-left: 4px solid #ffc000;
+    margin-left: 0;
+}
+.cv-post-meta {
+    margin-top: 12px;
+}
+span.bullet_div {
+    font-size: 13px;
+    display: inline-block;
+    margin: 0 7px;
+}
+.post-tags span {
+    font-size: 0;
+}
+.entry-footer .post-tags a {
+    background: var(--e-global-color-accent);
+    border: 1px solid var(--e-global-color-accent);
+    color: var(--e-global-color-black);
+    padding: 6px 11px;
+    text-decoration: none;
+    text-transform: capitalize;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 8px;
+}
+.entry-footer .post-tags a:hover {
+    background: var(--e-global-color-black) !important;
+    color: var(--e-global-color-accent);
+}
+.comment-respond label {
+    display: block;
+    margin-bottom: 4px;
+}
+.comment-respond input, .comment-respond textarea {
+    width: 100%;
+}
+.comment-respond textarea {
+    height: 182px;
+}
+.comment-respond input#wp-comment-cookies-consent {
+    display: inline-block;
+    width: auto;
+    float: left;
+    margin-right: 7px;
+    margin-top: 7px;
+}
+.comment-respond input#submit {
+    width: auto;
+    padding: 7px 24px;
+    border-radius: 5px;
+}
+.post_comment_section {
+    padding-top: 20px;
+}
+.post-tags span b {
+    font-size: 20px;
+    display: inline-block;
+    margin-right: 7px;
+}
+
+/* Details page desinge 2  */
+.post_author_meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    font-family: "Lato", sans-serif;
+    /* justify-content: center;     */
+    margin-bottom: 20px;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.author-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-text small {
+    display: block;
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 2px;
+    line-height: 1;
+}
+
+.author-text strong {
+    font-size: 17px;
+    color: #000;
+}
+
+.dot-separator {
+    font-size: 20px;
+    line-height: 1;
+    color: #000;
+}
+
+.post-date {
+    font-size: 14px;
+    color: #333;
+}
+.Post_designe_seconde h1 {
+    text-align: center;
+    margin-top: 0;
+}
+.Post_designe_seconde h1 {
+    text-align: center;
+    margin-top: 0;
+    font-weight: 900;
+    margin-bottom: 0;
+}
+.event_container {
+    background: #fff;
+    border-radius: 16px;
+    /* box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07); */
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0px 15px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+.event_main {
+    padding: 0;
+    font-size: 1.1rem;
+    color: #222;
+    line-height: 1.7;
+}
+.banner-section {
+    background-color: #fbe3d3;
+    text-align: center;
+    padding: 50px 15px;
+    font-size: 35px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+.banner-section h1 {
+    color: #1e1e1e;
+    background: transparent;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+    font-size: 35px;
+    line-height: 1.2;
+}
+.page-template-templatescourses_directory-php .banner-section {
+    margin-bottom: 0;
+}
+.page-template-templatescourses_directory-php a.btn.filterBtn {
+    color: #000;
+}
+.page-template-templatescourses_directory-php a.btn.filterBtn:hover {
+    color: var(--e-global-color-accent);
+}
+.llms-sd-header h2.llms-sd-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.llms-student-dashboard nav.llms-sd-nav ul.llms-sd-items {
+    /* border: 1px solid #00000029; */
+    box-shadow: 0 0 3px 0 #0000005e;
+}
+.llms-student-dashboard nav.llms-sd-nav ul.llms-sd-items li {
+    border-bottom: 1px solid #00000024;
+    padding-left: 15px;
+    padding: 1px 13px;
+    margin: 0;
+}
+
+a.llms-button-secondary {
+    color: var(--e-global-color-black) !important;
+    background: var(--e-global-color-accent) !important;
+}
+a.llms-button-secondary:hover {
+    background: var(--e-global-color-black) !important;
+    color: var(--e-global-color-accent) !important; 
+    text-decoration: none;
+}
+.llms-student-dashboard nav.llms-sd-nav ul.llms-sd-items li a {
+    color: #222;
+}
+.llms-student-dashboard nav.llms-sd-nav ul.llms-sd-items li a:hover {
+    color: #222;
+    text-decoration: none;
+}
+ .llms-student-dashboard nav.llms-sd-nav ul.llms-sd-items li.current {
+    background: var(--e-global-color-black) !important;
+}
+.llms-student-dashboard nav.llms-sd-nav ul.llms-sd-items li.current a {
+    color: var(--e-global-color-accent) !important;
+    font-weight: 600;
+}
+.slider-box .ui-widget-header {
+    background: #ffc000;
+}
+.slider-box .ui-widget-content {
+    background: #e4e4e4;
+}
+.logged-in .llms-sd-layout-columns .llms-sd-nav .llms-sd-items .llms-sd-item .llms-sep {
+        display: none;
+}
+.llms-meta-info h3.llms-meta-title {
+    margin-bottom: 9px;
+}
+.llms-meta-info .llms-meta {
+    margin-bottom: 4px;
+}
+.llms-button-action {
+    background: #ffc000;
+    border-radius: 4px;
+}
+.llms-button-action:hover {
+    background: #000;
+    text-decoration: none;
+}
+
+/* Lesson start*/
+section.lesson_benner_bg {
+    background: #000;
+    color: #fff;
+    min-height: 355px;
+    padding: 40px 0;
+    display: flex;
+}
+.les_created, .lesdateupdate {
+    font-size: 14px;
+}
+
+.lesson_benner_wrapper {
+    max-width: 66%;
+}
+.lessson_short_dec {
+    margin-bottom: 19px;
+    font-size: 20px;
+}
+.lesson_benner_wrapper h1 {
+    margin-bottom: 17px;
+    margin-top: 11px;
+    font-weight: 600;
+}
+.leasson2_main_wrapper {
+    display: grid;
+    grid-template-columns: 66% 31%;
+    gap: 3%;
+    padding: 30px 0;
+}
+.llms-button-action:hover {
+    background: #000;
+    text-decoration: none;
+}
+.lesson_course_meta .llms-meta-info {
+    margin: 4px 0;
+}
+.lesson_price {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 11px;
+    color: #ffc000;
+}
+.lesson_course_meta p {
+    font-size: 16px;
+}
+.lesson_course_enroll {
+    margin: 18px 0;
+}
+.lesson_prograss .llms-course-progress{
+        margin: 15px 0;        
+}
+.lesson_prograss .llms-course-progress {
+    margin: 15px 0;
+    box-shadow: inset 0 0 20px #faebd7;
+    padding: 5px 13px 20px;
+}
+sidebar.sidebar_lesson {
+    top: -252px;
+    position: relative;
+}
+.sidebar_parant {
+    box-shadow: 0 6px 19px -6px #fcf4dd;
+    border: 1px solid #ffc000;
+    padding: 12px;
+    border-radius: 7px;
+    /* top: -252px; */
+    position: sticky;
+    background: #fff;
+    top: 35px;
+}
+.course-content ul {
+    list-style: disc;
+}
+
+
+
+/* Lesson end*/
+
+@media (min-width: 768px) {
+    h1 {font-size: 30px;}
+    h2 {font-size: 27px;}
+    h3 {font-size: 25px;}
+}
+@media (min-width: 1200px) {
+    h1 {font-size: 44px;}
+    h2 {font-size: 32px;}
+    h3 {font-size: 28px;}
+    .dashboard .llms-loop-list.cols-3 .llms-loop-item {
+        width: 50%;
+    }
+}
+@media (max-width: 767px) {
+    .llms-student-dashboard nav.llms-sd-nav ul.llms-sd-items {
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+section.llms-sd-section.llms-my-memberships {
+    display: none;
+}

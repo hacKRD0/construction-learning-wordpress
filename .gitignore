@@ -1,0 +1,23 @@
+# ignore everything by default
+/*
+
+# keep infra
+!.gitignore
+!.github/
+!.cpanel.yml
+
+# any zip files
+*.zip
+*.tz
+*.gzip
+
+# ignore any directory named 'Archive' anywhere
+*Archive/
+
+# allow only our plugin path (and then re-limit to minimal files)
+!wp-content/
+wp-content/*
+
+
+# allow only styles.css from themes/twentytwentyfive
+!wp-content/themes/
