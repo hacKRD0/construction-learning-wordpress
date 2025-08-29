@@ -3,13 +3,13 @@ name: Deploy to cPanel (push-deploy via secrets)
 
 on:
   push:
-    branches: [ stage, main ]
+    branches: [ test, main ]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    # Gate prod with Environment protections; staging runs straight through.
-    environment: ${{ github.ref == 'refs/heads/main' && 'production' || 'staging' }}
+    # Gate prod with Environment protections; test runs straight through.
+    environment: ${{ github.ref == 'refs/heads/main' && 'production' || 'test' }}
 
     steps:
       - name: Checkout
@@ -41,8 +41,8 @@ jobs:
             echo "  path: $path"
             # DO NOT echo the full URL from secrets, it will be masked as ***, so this is more useful
           }
-          echo "STAGE:"
-          show "${{ secrets.STAGE_REPO_URL }}"
+          echo "TEST:"
+          show "${{ secrets.TEST_REPO_URL }}"
           echo
           echo "PROD:"
           show "${{ secrets.PROD_REPO_URL }}"
@@ -52,17 +52,17 @@ jobs:
         id: host
         shell: bash
         run: |
-          stage_host=$(echo "${{ secrets.STAGE_REPO_URL }}" | sed -E 's#.*@([^/:]+).*#\1#')
+          test_host=$(echo "${{ secrets.TEST_REPO_URL }}" | sed -E 's#.*@([^/:]+).*#\1#')
           prod_host=$(echo "${{ secrets.PROD_REPO_URL }}" | sed -E 's#.*@([^/:]+).*#\1#')
-          echo "stage_host=$stage_host" >> $GITHUB_OUTPUT
+          echo "test_host=$test_host" >> $GITHUB_OUTPUT
           echo "prod_host=$prod_host"   >> $GITHUB_OUTPUT
 
       - name: Add server host keys
         shell: bash
         run: |
           mkdir -p ~/.ssh
-          if [ -n "${{ steps.host.outputs.stage_host }}" ]; then
-            ssh-keyscan -H "${{ steps.host.outputs.stage_host }}" >> ~/.ssh/known_hosts
+          if [ -n "${{ steps.host.outputs.test_host }}" ]; then
+            ssh-keyscan -H "${{ steps.host.outputs.test_host }}" >> ~/.ssh/known_hosts
           fi
           if [ -n "${{ steps.host.outputs.prod_host }}" ]; then
             ssh-keyscan -H "${{ steps.host.outputs.prod_host }}"  >> ~/.ssh/known_hosts
@@ -70,7 +70,7 @@ jobs:
           
       - name: Force cPanel receive-pack
         run: |
-          git config remote.stage.receivepack /usr/local/cpanel/3rdparty/bin/git-receive-pack
+          git config remote.test.receivepack /usr/local/cpanel/3rdparty/bin/git-receive-pack
           git config remote.prod.receivepack  /usr/local/cpanel/3rdparty/bin/git-receive-pack
 
         
@@ -82,17 +82,17 @@ jobs:
       - name: Configure cPanel remotes
         shell: bash
         run: |
-          git remote remove stage 2>/dev/null || true
+          git remote remove test 2>/dev/null || true
           git remote remove prod  2>/dev/null || true
-          git remote add stage "${{ secrets.STAGE_REPO_URL }}"
+          git remote add test "${{ secrets.TEST_REPO_URL }}"
           git remote add prod  "${{ secrets.PROD_REPO_URL }}"
           
       - name: Show remotes
         run: git remote -v
 
-      - name: Push to STAGE
-        if: github.ref == 'refs/heads/stage'
-        run: git push --force --exec=/usr/local/cpanel/3rdparty/bin/git-receive-pack stage refs/heads/stage:refs/heads/stage
+      - name: Push to TEST
+        if: github.ref == 'refs/heads/test'
+        run: git push --force --exec=/usr/local/cpanel/3rdparty/bin/git-receive-pack test refs/heads/test:refs/heads/test
 
 
       - name: Push to PROD
